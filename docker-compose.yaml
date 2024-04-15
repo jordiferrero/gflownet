@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    container_name: gflownet-server
+    volumes:
+      - .:/code
+    ports:
+      - "8888:8888"

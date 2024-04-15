@@ -74,9 +74,9 @@ def main():
     config = init_empty(Config())
     config.print_every = 1
     config.log_dir = "./logs/debug_run_mr4"
-    config.device = "cuda"
+    config.device = "cuda" if torch.cuda.is_available() else "cpu"
     config.num_training_steps = 10_000
-    config.num_workers = 8
+    config.num_workers = 2
     config.algo.tb.do_parameterize_p_b = True
 
     trial = MakeRingsTrainer(config)
