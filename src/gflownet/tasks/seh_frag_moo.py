@@ -391,7 +391,7 @@ def main():
     """Example of how this model can be run."""
     config = init_empty(Config())
     config.desc = "debug_seh_frag_moo"
-    config.log_dir = "./logs/debug_run_sfm"
+    config.log_dir = "./logs/debug_run_sfm2"
     config.device = "cuda" if torch.cuda.is_available() else "cpu"
     config.num_workers = 0
     config.print_every = 1
